@@ -21,8 +21,42 @@ header {
 }
 
 header > span {
+    position: relative;
     display: inline-block;
     padding-top: 50px;
     padding-bottom: 60px;
     padding-left: 50px;
+}
+
+
+/*Signin index.php*/
+.form-signin {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 330px;
+    padding-top: 15px;
+}
+
+.form-signin > .titulo {
+    margin: 250px auto 50px;
+    color: #707070;
+    font-weight: 500;
+}
+
+.btn-enviar {
+    display: block;
+    width: 100%;
+    color:#FFF;
+    background-color: #007BFF;
+    border-color: #007BFF;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 1.3rem;
+}
+
+form > .btn-enviar {
+    margin-top: 33px;
+    padding: 8px 89px;
 }
