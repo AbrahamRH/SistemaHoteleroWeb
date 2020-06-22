@@ -13,7 +13,7 @@
         <div class="logo">EL DESCANSO MEDIEVAL</div>
     </header>
     <main>
-        <form class="form-signin">
+        <form class="form-signin" action="POST">
             <h2 class="titulo">Iniciar sesión</h2>
             <label for="inputEmail" class="sr-only">Correo electrónico</label>
             <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus>
