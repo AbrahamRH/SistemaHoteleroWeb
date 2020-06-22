@@ -1,0 +1,30 @@
+/**/
+
+.contenedor {
+    padding: 40px 160px; 
+    margin-bottom: 300px;;
+    background-color: #F7F7F7;
+}
+
+.registroUsuario {
+        text-align: left;
+        position: relative;
+        margin: auto;
+        width: 100%;
+        max-width: 1000px;
+        padding-top: 15px;
+}
+
+
+.registroUsuario > .titulo {
+    margin: 100px auto 50px;
+    color: #707070;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 600px) {
+    .registroUsuario {
+        text-align: center;
+    }
+}
