@@ -1,0 +1,15 @@
+/*Signin index.php*/
+.form-signin {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 330px;
+    padding-top: 15px;
+}
+
+.form-signin > .titulo {
+    margin: 250px auto 50px;
+    color: #707070;
+    font-weight: 500;
+}
