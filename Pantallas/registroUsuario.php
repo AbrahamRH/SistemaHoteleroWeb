@@ -50,12 +50,15 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="verPassword" class="col-sm-2 col-form-label">Verificar ontraseña:</label>
+                    <label for="verPassword" class="col-sm-2 col-form-label">Verificar contraseña:</label>
                     <div class="col-sm-10">
                         <input type="password" class="form-control" id="verPassword" placeholder=" Verificar contraseña">
                     </div>
                 </div>
-                <button class="btn-enviar">Enviar</button>
+                <div class="flex-container">
+                    <button class="btn-registrar btn">Enviar</button>
+                    <a href="./menu.php" class="btn-regresar btn">Regresar</a>
+                </div>
             </div>
 
 

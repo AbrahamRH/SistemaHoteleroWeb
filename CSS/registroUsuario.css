@@ -2,17 +2,30 @@
 
 .contenedor {
     padding: 40px 160px; 
-    margin-bottom: 300px;;
+    margin-bottom: 200px;;
+    border: 1px solid #dedede;
     background-color: #F7F7F7;
+    color: #707070;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+}
+
+.col-sm-2 {
+    padding-bottom: 20px;
 }
 
 .registroUsuario {
-        text-align: left;
-        position: relative;
-        margin: auto;
-        width: 100%;
-        max-width: 1000px;
-        padding-top: 15px;
+    text-align: left;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 15px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
@@ -21,6 +34,38 @@
     color: #707070;
     font-weight: 500;
 }
+
+.btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 1.3rem;
+    font-size: 1.25rem;
+    margin: 3px;
+}
+.btn-registrar {
+    background-color: #007BFF;
+    border-color: #007BFF;
+    color:#FFF;
+    line-height: 1.5;
+}
+
+.btn-registrar:hover {
+    background-color:#007bffd8;
+    color: #FFF;
+}
+
+.btn-regresar {
+    background-color: #FFF;
+    border: 1px solid #007BFF;
+    color:#007BFF;
+    text-align: center;
+}
+
+.btn-regresar:hover {
+    background-color:#FFF;
+    color: #007bffd8;
+}
+
 
 
 @media screen and (max-width: 600px) {
