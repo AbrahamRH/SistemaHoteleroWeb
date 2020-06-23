@@ -1,8 +1,7 @@
-<?php echo 'hola';?>
-
 <?php
-    require './Componentes/UserSession.php';
-    require './Componentes/User.php';
+    include_once './Componentes/connectionDB.php';
+    include_once './Componentes/User.php';
+    include_once './Componentes/UserSession.php';
 
     $userSession = new UserSession();
     $user = new User();
@@ -12,6 +11,6 @@
     }else if(isset($_POST['correo']) && isset($_POST['password'])){
         echo "Validacion log in";
     }else{
-        echo "Login";
+        include_once './Pantallas/login.php';
     }
 ?>

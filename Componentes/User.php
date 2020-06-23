@@ -1,6 +1,6 @@
 <?php
 include './connectionDB.php';
-class User extends DB {
+class User extends connectionDB {
     private $nombre;
     private $correo;
     public function userExists($email, $pass){
