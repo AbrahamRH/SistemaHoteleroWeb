@@ -6,12 +6,12 @@
         private $password;
         private $charset;
 
-        public function _construct(){
+        public function __construct(){
             $this-> host = 'localhost';
             $this-> db   = 'hotel';
             $this-> user = 'root';
             $this-> password = 'Naranja90*';
-            $this-> charset  = 'utf8mb4';        
+            $this-> charset  = 'utf8mb4';     
         }
 
         public function connect(){
