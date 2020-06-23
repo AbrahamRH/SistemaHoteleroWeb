@@ -20,39 +20,39 @@
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                        <input type="text" class="form-control form-control-lg" id="nombre" placeholder="Nombre">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="ApPaterno" class="col-sm-2 col-form-label">Apellido paterno:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="ApPaterno" placeholder="Apellido paterno">
+                        <input type="text" class="form-control form-control form-control-lg" id="ApPaterno" placeholder="Apellido paterno">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="ApMaterno" class="col-sm-2 col-form-label">Apellido materno:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="ApMaterno" placeholder="Apellido materno">
+                        <input type="text" class="form-control form-control form-control-lg" id="ApMaterno" placeholder="Apellido materno">
                     </div>
                 </div>
                 
                 <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Correo electrónico:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Correo electrónico">
+                        <input type="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico">
                     </div>
                 </div>   
     
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña:</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+                        <input type="password" class="form-control form-control form-control-lg" id="inputPassword" placeholder="Contraseña">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="verPassword" class="col-sm-2 col-form-label">Verificar contraseña:</label>
                     <div class="col-sm-10">
-                        <input type="password" class="form-control" id="verPassword" placeholder=" Verificar contraseña">
+                        <input type="password" class="form-control form-control form-control-lg" id="verPassword" placeholder=" Verificar contraseña">
                     </div>
                 </div>
                 <div class="flex-container">
