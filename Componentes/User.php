@@ -2,9 +2,7 @@
 include './connectionDB.php';
 class User extends DB {
     private $nombre;
-    private 
     private $correo;
-    
     public function userExists($email, $pass){
         $md5pass = md5($pass);
         $query = $this->connect()->prepare('SELECT * FROM USUARIO WHERE correo =:email AND password = :pass');
