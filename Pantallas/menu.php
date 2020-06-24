@@ -11,17 +11,17 @@
 <body>
     <header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
-        <?php ?>
+        <a href="../Componentes/logout.php" class="logo btn">Cerrar sesion</a>
     </header>
     <main>
         <div class="flex-container">
-            <a href="#">Registro usuario</a>
+            <a href="./registroUsuario.php">Registro usuario</a>
             <a href="#">Reporte ventas</a>
             <a href="#">Reporte de habitaciones</a>
             <a href="#">Actualización de usuarios</a>
             <a href="#">Actualización de servicios</a>
             <a href="#">Actualización de datos de habitaciones</a>
-            <a href="#">Reservar una habitación</a>
+            <a href="./registroReservacion.php">Reservar una habitación</a>
             <a href="#">Configuración</a>
         </div>
     </main>
