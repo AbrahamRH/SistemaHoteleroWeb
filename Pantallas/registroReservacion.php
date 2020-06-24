@@ -9,36 +9,36 @@
     <title>El descanso medieval</title>
 </head>
 <body>
-    <header>
+    <header></header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
     </header>
     <main>
-        <form class="registroUsuario" action="POST">
+        <form class="registroUsuario" action="../Componentes/registroRes.php" method="POST">
             <h2 class="titulo">Registro del huesped</h2>
             <div class="contenedor">
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-lg" id="nombre" placeholder="Nombre">
+                        <input type="text" class="form-control form-control-lg" id="nombre" placeholder="Nombre" name="nombre">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="ApPaterno" class="col-sm-2 col-form-label">Apellido paterno:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control form-control-lg" id="ApPaterno" placeholder="Apellido paterno">
+                        <input type="text" class="form-control form-control form-control-lg" id="ApPaterno" placeholder="Apellido paterno" name="apPat">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="ApMaterno" class="col-sm-2 col-form-label">Apellido materno:</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control form-control-lg" id="ApMaterno" placeholder="Apellido materno">
+                        <input type="text" class="form-control form-control form-control-lg" id="ApMaterno" placeholder="Apellido materno" name="apMat">
                     </div>
                 </div>
                 
                 <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Correo electrónico:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico">
+                        <input type="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico" name="correo">
                     </div>
                 </div>   
             </div>
@@ -48,7 +48,7 @@
             <div class="contenedor">
                 <div class="form-group row">
                     <div class="col-10">
-                        <select class="custom-select">
+                        <select class="custom-select" name="tipo">
                             <option selected>Seleccione el tipo de habitación: </option>
                             <option value="1">Estándar</option>
                             <option value="2">Estándar c/frigobar</option>
@@ -57,15 +57,15 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="check-in" class="col-2 col-form-label">Fecha de llegada: </label>
+                    <label for="check-in" class="col-2 col-form-label" >Fecha de llegada: </label>
                     <div class="col-10">
-                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-in">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-in" name="llegada">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="check-out" class="col-2 col-form-label">Fecha de salida: </label>
                     <div class="col-10">
-                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-out">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-out" name="salida">
                     </div>
                 </div>
                 <div class="flex-container">
