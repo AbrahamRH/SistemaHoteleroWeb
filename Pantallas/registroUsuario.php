@@ -11,7 +11,6 @@
 <body>
     <header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
-        <?php ?>
     </header>
     <main>
         <form class="registroUsuario" action="POST">

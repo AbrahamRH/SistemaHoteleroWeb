@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
-        <?php ?>
+        <a href="../Componentes/logout.php" class="logo btn">Cerrar sesion</a>
     </header>
     <main>
         <div class="flex-container">
