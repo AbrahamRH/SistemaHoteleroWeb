@@ -1,16 +1,20 @@
 <?php
-    include_once './Componentes/connectionDB.php';
-    include_once './Componentes/User.php';
-    include_once './Componentes/UserSession.php';
+    include_once './Componentes/db.php';
 
-    $userSession = new UserSession();
-    $user = new User();
+    session_start();
 
-    if(isset($_SESSION['nombre'])){
-        echo "Hay sesión";
-    }else if(isset($_POST['correo']) && isset($_POST['password'])){
-        echo "Validacion log in";
-    }else{
-        include_once './Pantallas/login.php';
+
+    if (isset($_SESSION['usuario_id'])) {
+        $records = $conn->prepare('SELECT usuario_id, correo, password FROM USUARIO WHERE id = :id');
+        $records->bindParam(':id', $_SESSION['user_id']);
+        $records->execute();
+        $results = $records->fetch(PDO::FETCH_ASSOC);
+
+        $user = null;
+
+        if (count($results) > 0) {
+        $user = $results;
+        }
     }
+
 ?>
