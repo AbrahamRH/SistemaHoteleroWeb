@@ -15,7 +15,7 @@
     </header>
     <main>
         <form class="registroUsuario" action="POST">
-            <h2 class="titulo">Registro de Usuario</h2>
+            <h2 class="titulo">Registro del huesped</h2>
             <div class="contenedor">
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
@@ -42,17 +42,31 @@
                         <input type="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico">
                     </div>
                 </div>   
-    
+            </div>
+
+            <h2 class="titulo">Registro de la Reservación</h2>
+
+            <div class="contenedor">
                 <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña:</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control form-control form-control-lg" id="inputPassword" placeholder="Contraseña">
+                    <div class="col-10">
+                        <select class="custom-select">
+                            <option selected>Seleccione el tipo de habitación: </option>
+                            <option value="1">Estándar</option>
+                            <option value="2">Estándar c/frigobar</option>
+                            <option value="3">Junior suite</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="verPassword" class="col-sm-2 col-form-label">Verificar contraseña:</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control form-control form-control-lg" id="verPassword" placeholder=" Verificar contraseña">
+                    <label for="check-in" class="col-2 col-form-label">Fecha de llegada: </label>
+                    <div class="col-10">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-in">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="check-out" class="col-2 col-form-label">Fecha de salida: </label>
+                    <div class="col-10">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-out">
                     </div>
                 </div>
                 <div class="flex-container">
@@ -60,7 +74,7 @@
                     <a href="./menu.php" class="btn-regresar btn">Regresar</a>
                 </div>
             </div>
-
+            
 
         </form>
     </main>
