@@ -42,6 +42,12 @@
                     </div>
                 </div>   
                 <div class="form-group row">
+                    <label for="inputEmail" class="col-sm-2 col-form-label">Correo electrónico del usuario que va a registrar:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control form-control form-control-lg" id="inputEmailUs" placeholder="Correo electrónico usuario" name="correoUs">
+                    </div>
+                </div> 
+                <div class="form-group row">
                     <div class="col-10">
                         <select class="custom-select" name="tipo">
                             <option selected>Seleccione el tipo de habitación: </option>
