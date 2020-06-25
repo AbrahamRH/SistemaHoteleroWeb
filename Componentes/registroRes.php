@@ -6,7 +6,6 @@
     $apMat = $_POST['apMat'];
     $correo = $_POST['correo'];
     
-
     
     $query = $con->prepare("INSERT INTO HUESPED (huesped_id,nombre, apellido_paterno, apellido_materno, correo) VALUES (null,?,?,?,?)");
     $query->bindParam(1,$nombre);
@@ -39,7 +38,8 @@
         $idHuesped = $us['huesped_id']; 
     }
 
-    $query2 = $con->prepare("INSERT INTO RESERVA (reserva_id,usuario_id,huesped_id,habitacion_id,check-in,check-out,numero_huespedes) VALUES (null,?,?,?,?,?,?)");
+    $query2 = $con->prepare("INSERT INTO RESERVA (reserva_id,usuario_id,huesped_id,habitacion_id,check-in,check-out,numero_huespedes) 
+                             VALUES (null,?,?,?,?,?,?)");
     //check out 12  in 1 a 3 
     $query2->bindParam(1,$idUsuario);
     $query2->bindParam(2,$idHuesped);
@@ -50,10 +50,11 @@
     
 
     $query2->execute();
-    
-    $mensaje="Nombre:". $nombre.$apPat.$apMat." Su numero de reserva de habitacion es: ".$reserva_id;
+
+    $mensaje="Nombre:". $nombre." ".$apPat." ".$apMat." Su numero de reserva de habitacion es: ".$reserva_id;
     mail($correo,"Reservacion",$mensaje);
 
     header("location: ../Pantallas/envioFormulario.php");
+
 
 ?>

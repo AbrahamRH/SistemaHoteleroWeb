@@ -122,19 +122,13 @@ ALTER TABLE `HUESPED`
 -- Indices de la tabla `REGISTRO_PAGO`
 --
 ALTER TABLE `REGISTRO_PAGO`
-  ADD PRIMARY KEY (`registro_id`),
-  ADD KEY `fk_reserva_id` (`reserva_id`),
-  ADD KEY `fkusuario_id` (`usuario_id`),
-  ADD KEY `huesped_fk_id` (`huesped_id`);
+  ADD PRIMARY KEY (`registro_id`);
 
 --
 -- Indices de la tabla `RESERVA`
 --
 ALTER TABLE `RESERVA`
-  ADD PRIMARY KEY (`reserva_id`),
-  ADD KEY `fk_usuario_id` (`usuario_id`),
-  ADD KEY `fk_habitacion_id` (`habitacion_id`),
-  ADD KEY `fk_huesped_id` (`huesped_id`);
+  ADD PRIMARY KEY (`reserva_id`);
 
 --
 -- Indices de la tabla `USUARIO`
@@ -179,22 +173,6 @@ ALTER TABLE `USUARIO`
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `REGISTRO_PAGO`
---
-ALTER TABLE `REGISTRO_PAGO`
-  ADD CONSTRAINT `fk_reserva_id` FOREIGN KEY (`reserva_id`) REFERENCES `RESERVA` (`reserva_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `huesped_fk_id` FOREIGN KEY (`huesped_id`) REFERENCES `RESERVA` (`huesped_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-
---
--- Filtros para la tabla `RESERVA`
---
-ALTER TABLE `RESERVA`
-  ADD CONSTRAINT `fk_habitacion_id` FOREIGN KEY (`habitacion_id`) REFERENCES `HABITACION` (`habitacion_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `fk_huesped_id` FOREIGN KEY (`huesped_id`) REFERENCES `HUESPED` (`huesped_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `fk_usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `USUARIO` (`usuario_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

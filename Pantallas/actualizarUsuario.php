@@ -99,7 +99,7 @@
             </div>
         </form>
 
-        <form action="../Componentes/actualizarUsuario.php" method="POST" class="registroUsuario">
+        <form action="../Componentes/borrarUsuario.php" method="POST" class="registroUsuario">
         <h2 class="titulo">Eliminar usuario:</h2>
             <div class="contenedor">
                 <div class="form-group row">
