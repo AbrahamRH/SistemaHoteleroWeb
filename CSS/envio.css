@@ -1,0 +1,35 @@
+.container {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 1.3rem;
+    font-size: 1.25rem;
+    margin: 3px;
+}
+
+p {
+    display: block;
+    font-size: xx-large;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-container .btn-regresar {
+    background-color: #007BFF;
+    border-color: #007BFF;
+    color:#FFF;
+
+}
+
+.btn-regresar:hover {
+    background-color:#007bffd8;
+    color: #FFF;
+}

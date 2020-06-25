@@ -16,5 +16,6 @@
     $query->bindParam(6,$cargo);
     $query->execute();
     
+    header("location: ../Pantallas/envioFormulario.php");
     
 ?> 

@@ -34,4 +34,6 @@
 
     $query2->execute();
 
+    header("location: ../Pantallas/envioFormulario.php");
+
 ?>
