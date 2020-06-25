@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -9,12 +9,12 @@
     <title>El descanso medieval</title>
 </head>
 <body>
-    <header></header>
+    <header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
     </header>
     <main>
         <form class="registroUsuario" action="../Componentes/registroRes.php" method="POST">
-            <h2 class="titulo">Registro del huesped</h2>
+        <h2 class="titulo">Registro del huesped y Registro de la Reservación</h2> 
             <div class="contenedor">
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
@@ -41,11 +41,6 @@
                         <input type="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico" name="correo">
                     </div>
                 </div>   
-            </div>
-
-            <h2 class="titulo">Registro de la Reservación</h2>
-
-            <div class="contenedor">
                 <div class="form-group row">
                     <div class="col-10">
                         <select class="custom-select" name="tipo">
@@ -68,12 +63,25 @@
                         <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-out" name="salida">
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label for="Numero_huespedes" class="col-2 col-form-label">Numero de huespedes: </label>
+                    <div class="col-10">
+                        <input class="form-control form-control-lg" type="text" id="Numero_huespedes" name="numHues">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Numero de habitacion" class="col-2 col-form-label">Numero de habitacion</label>
+                    <div class="col-10">
+                        <input class="form-control" type="number" value="104" id="example-number-input" name="numHab">
+                    </div>
+                </div>
                 <div class="flex-container">
                     <button class="btn-registrar btn">Enviar</button>
                     <a href="./menu.php" class="btn-regresar btn">Regresar</a>
                 </div>
             </div>
             
+
 
         </form>
     </main>

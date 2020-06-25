@@ -18,11 +18,10 @@
             <a href="./registroUsuario.php">Registro usuario</a>
             <a href="#">Reporte ventas</a>
             <a href="#">Reporte de habitaciones</a>
-            <a href="#">Actualización de usuarios</a>
+            <a href="./actualizarUsuario.php">Actualización de usuarios</a>
             <a href="#">Actualización de servicios</a>
             <a href="#">Actualización de datos de habitaciones</a>
             <a href="./registroReservacion.php">Reservar una habitación</a>
-            <a href="#">Configuración</a>
         </div>
     </main>
 </body>

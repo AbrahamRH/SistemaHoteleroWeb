@@ -12,4 +12,8 @@
             return false;
         }
     }
+
+    function getAllUsers($con){
+        return $con->prepare("SELECT * FROM USUARIO");
+    }
 ?>
