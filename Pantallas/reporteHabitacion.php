@@ -3,6 +3,10 @@
     $query = $con->prepare("SELECT * FROM HABITACION");
     $query->execute();
     $habitaciones = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    $query = $con->prepare("SELECT * FROM RESERVA");
+    $query->execute();
+    $reservas = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -25,25 +29,37 @@
         <table class="table">
         <thead class="thead-dark">
             <tr>
-            <th scope="col">ID</th>
-            <th scope="col">TIpo</th>
-            <th scope="col">Estado</th>
+                <th scope="col">ID</th>
+                <th scope="col">TIpo</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Huesped ID</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach($habitaciones as $habitacion){ ?>
+            <?php foreach($habitaciones as $habitacion){ 
+                $huesped = 'null';
+                foreach($reservas as $reserva){
+                    if($reserva['habitacion_id'] == $habitacion['habitacion_id']){
+                        $huesped = $reserva['huesped_id'];
+                    }
+                }
+            ?>
             <tr>
             <th scope="row"><?php echo $habitacion['habitacion_id']; ?></th>
             <td><?php echo $habitacion['categoria']; ?></td>
             <td><?php echo $habitacion['estado']; ?></td>
+            <td><?php echo $huesped; ?></td>
             </tr>
             <?php }?>
         </tbody>
         </table>
     </div>
-    <div class="flex-container">
-        <a href="./menu.php" class="btn-regresar btn">Regresar</a>
-    </div>
+    <form class="registroUsuario" action="../Componentes/actualizarHabitacion.php" method="POST">
+        <div class="flex-container">
+            <button class="btn-registrar btn">Enviar</button>
+            <a href="./menu.php" class="btn-regresar btn">Regresar</a>
+        </div>
+    </form>
 
 </body>
 </html>

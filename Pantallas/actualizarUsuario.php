@@ -44,7 +44,7 @@
         </table>
     </div>
 
-    <form class="registroUsuario" action="../Componentes/registroUs.php" method="POST">
+    <form class="registroUsuario" action="../Componentes/actualizarUsuario.php" method="POST">
             <h2 class="titulo">Actualizar Usuario</h2>
             <div class="contenedor">
                 <div class="form-group row">

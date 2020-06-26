@@ -9,7 +9,6 @@
     $pass = $_POST['password'];
     $cargo = $_POST['cargo'];
 
-    //intval($id);
 
     $query = $con->prepare("UPDATE `USUARIO` 
                             SET

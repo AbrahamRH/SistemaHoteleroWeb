@@ -48,25 +48,15 @@
                     </div>
                 </div> 
                 <div class="form-group row">
-                    <div class="col-10">
-                        <select class="custom-select" name="tipo">
-                            <option selected>Seleccione el tipo de habitación: </option>
-                            <option value="1">Estándar</option>
-                            <option value="2">Estándar c/frigobar</option>
-                            <option value="3">Junior suite</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group row">
                     <label for="check-in" class="col-2 col-form-label" >Fecha de llegada: </label>
                     <div class="col-10">
-                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-in" name="llegada">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2020-08-19T13:45:00" id="check-in" name="llegada">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="check-out" class="col-2 col-form-label">Fecha de salida: </label>
                     <div class="col-10">
-                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-out" name="salida">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2020-08-19T12:00:00" id="check-out" name="salida">
                     </div>
                 </div>
                 <div class="form-group row">
