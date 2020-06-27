@@ -28,7 +28,7 @@
                 <div class="form-group row">
                     <label for="id" class="col-sm-2 col-form-label">ID de la habitacion que desea modificar:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="habitacionIdViejo" class="form-control form-control form-control-lg" id="id habitacion" placeholder="ID de la habitacion">
+                        <input type="text" name="habitacionId" class="form-control form-control form-control-lg" id="id habitacion" placeholder="ID de la habitacion">
                     </div>
                 </div>
                 <div class="form-group row">

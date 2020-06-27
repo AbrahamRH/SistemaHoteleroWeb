@@ -26,16 +26,51 @@
 </head>
 <body>
     <header>
-        <div class="logo">EL DESCANSO MEDIEVAL  <?php echo $_SESSION['cargo']; ?> </div>
+        <div class="logo">EL DESCANSO MEDIEVAL </div>
     </header>
-    <div class="registroUsuario" action="../Componentes/actualizarHabitacion.php" method="POST">
-    <h2 class="titulo">Reportes por: </h2>
-        <div class="flex-container">
-            <a href="./repHab.php" class="btn-regresar btn">Por habitacion</a>
-            <a href="./repUs.php" class="btn-regresar btn">Por usuario</a>
-            <a href="./repFecha.php" class="btn-regresar btn">Por fecha</a>
-        </div>
+    
+    <div class="container">
+         <h2 class="titulo">Por : </h2>
+         
+        <!-- Usuario -->
+        <form class="form-inline" action="./repUs.php" method="POST">
+            <div class="form-group mb-2">
+                <label for="staticEmail2" class="sr-only">user</label>
+                <input type="text" readonly class="form-control-plaintext" id="user" value="Usuario:">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="user" class="sr-only">user</label>
+                <input type="text" name="ID" class="form-control" id="user" placeholder="ID del usuario">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Confirmar</button>
+        </form>
+
+        <!-- Por Tipo de habitacion -->
+        <form class="form-inline" action="./repHab.php" method="POST">
+            <div class="form-group mb-2">
+                <label for="staticEmail2" class="sr-only">Habitacion</label>
+                <input type="text" readonly class="form-control-plaintext" id="habitacion" value="Tipo de habitación:">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="habitacion" class="sr-only">Habitacion</label>
+                <input type="text" name="tipo" class="form-control" id="habitacion" placeholder="Tipo de habitación">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Confirmar</button>
+        </form>
+        <!-- Por fecha -->
+        <form class="form-inline" action="./repFecha.php" method="POST">
+            <div class="form-group mb-2">
+                <label for="staticEmail2" class="sr-only">Email</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Fecha:">
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="fecha" class="sr-only">Password</label>
+                <input type="datetime-local" value="2011-08-19T13:45:00" name="fecha" class="form-control" id="fecha" placeholder="Fecha de la reservación:">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Confirmar</button>
+        </form>
     </div>
+    
     <div class="container">
         <h2 class="titulo">Ventas: </h2>
         <table class="table">
@@ -55,7 +90,7 @@
             <?php foreach($ventas as $venta){ 
                     foreach($reservas as $reserva){
                         if($venta['reserva_id'] == $reserva['reserva_id']){
-                            $checkin  = $reserva['check-out'];
+                            $checkin  = $reserva['check-in'];
                             $checkout = $reserva['check-out'];
                             $habitacionId = $reserva['habitacion_id'];
                         }

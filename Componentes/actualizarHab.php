@@ -1,19 +1,18 @@
 <?php
     include_once './db.php';
 
-    $idV = intval($_POST['habitacionIdViejo']);
+    $id = intval($_POST['habitacionId']);
     $cat = $_POST['categoria'];
     $est = $_POST['estado'];
     $cos = floatval($_POST['costo']);
     
     $query = $con->prepare("UPDATE `HABITACION` 
-                            SET
-                            `categoria` = '".$cat."',
-                            `estado` = '".$est."', 
-                            `costo` = '".$cos."',
+                            SET `habitacion_id` = '".$id."', `categoria` = '".$cat."', `estado` = '".$est."', `costo` = '".$cos."'
                             WHERE `HABITACION`.`habitacion_id` = ? ");
-    $query->bindParam(1,$idV);
+    $query->bindParam(1,$id);
     $query->execute();
+
+    
     header("location: ../Pantallas/envioFormulario.php");
         
 ?>
