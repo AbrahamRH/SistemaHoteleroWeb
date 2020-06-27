@@ -71,6 +71,18 @@
                         <input class="form-control" type="number" value="104" id="example-number-input" name="numHab">
                     </div>
                 </div>
+                <div class="form-group row">
+                    <label for="descripcion" class="col-sm-2 col-form-label">Descripcion del pago:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-lg" id="descripcion" placeholder="Descripcion" name="descripcion">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="ApPaterno" class="col-sm-2 col-form-label">Monto:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control form-control-lg" id="Monto" placeholder="Monto" name="monto">
+                    </div>
+                </div>
                 <div class="flex-container">
                     <button class="btn-registrar btn">Enviar</button>
                     <a href="./menu.php" class="btn-regresar btn">Regresar</a>

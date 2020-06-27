@@ -1,7 +1,8 @@
 <?php
     include_once './db.php';
 
-    /**Datos del huesped*/
+//----------------------------------------------------------registro de huesped----------------------------------------------
+
     $nombre = $_POST['nombre'];
     $apPat = $_POST['apPat'];
     $apMat = $_POST['apMat'];
@@ -45,15 +46,12 @@
 
     $query2->execute();
 
+//----------------------------------------------------------registro de registro pago----------------------------------------------
 
-    header("location: ../Pantallas/registroPago.php"); //.....manda a pagina registro de pag
-
-    //-------------------------------------------parte del registro de pago-------------------------------------------
-    /*
     $descripcion = $_POST['descripcion'];
     $monto = $_POST['monto'];
     
-    $query = $con->prepare("SELECT * FROM RESERVA WHERE  usuario_id= '".$idUsuario."' AND huesped_id= '".$idHuesped."' ");
+    $query = $con->prepare("SELECT * FROM RESERVA WHERE  usuario_id= '".$usuarioId."' AND huesped_id= '".$idHuesped."' ");
     $query->execute();
     $user2 = $query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -61,18 +59,20 @@
         $idReserva = $us['reserva_id'];
     }
 
-    $query3 = $con->prepare("INSERT INTO REGISTRO_PAGO (registro_id,reserva_id,usuario_id,huesped_id,descripcion,importe) VALUES(null,?,?,?,?,?)");
+    $query3 = $con->prepare("INSERT INTO REGISTRO_PAGO (registro_id,reserva_id,usuario_id,huesped_id,descripción,importe) VALUES(null,?,?,?,?,?)");
     $query3->bindParam(1,intval($idReserva));
-    $query3->bindParam(2,intval($idUsuario));
+    $query3->bindParam(2,intval($usuarioId));
     $query3->bindParam(3,intval($idHuesped));
     $query3->bindParam(4,$descripcion);
-    $query3->bindParam(5,intval($monto));
+    $query3->bindParam(5,floatval($monto));
     
-    $query3->execute();*/
+    $query3->execute();
+
+    
     //$mensaje="Nombre:". $nombre." ".$apPat." ".$apMat." Su numero de reserva de habitacion es: ".$reserva_id;
     //mail($correo,"Reservacion",$mensaje);
 
-    //header("location: ../Pantallas/envioFormulario.php");
+    header("location: ../Pantallas/envioFormulario.php");
 
 
 ?>
