@@ -80,7 +80,9 @@
     
     $query3->execute();
 
-    
+    $mensaje='Gracias '.$nombre." ".$apPat." ".$apMat.'por hacer su reserva en EL DESCANSO MEDIEVAL \n'.$usuarioId.'\n Id de reserva: '.$idReserva.'\n Monto: $'.$monto;
+    mail($correo,'Ticket',$mensaje);
+
     //$mensaje="Nombre:". $nombre." ".$apPat." ".$apMat." Su numero de reserva de habitacion es: ".$reserva_id;
     //mail($correo,"Reservacion",$mensaje);
 
