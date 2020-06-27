@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/envio.css">
     <title>El descanso medieval</title>
-    <?php session_start(); ?>
 </head>
 <body>
     <header>
@@ -16,7 +15,7 @@
     <main>
         <div class="container">
             <div class="flex-container">
-                <p>Los datos se registraron exitosamente</p>
+                <p>Error al completar formulario.</p>
             </div>
             <div class="flex-container">
                 <a href="./menu.php" class="btn-regresar btn">Regresar</a>

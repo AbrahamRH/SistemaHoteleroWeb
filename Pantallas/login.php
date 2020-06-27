@@ -19,9 +19,11 @@
             $users = $query->fetchAll(PDO::FETCH_ASSOC);
             foreach($users as $us){
                 $cargo = $us['cargo'];
+                $id = $us['usuario_id'];
             }
             
             $_SESSION['cargo'] = $cargo;
+            $_SESSION['id'] = $id;
             
                 
             include_once './menu.php';

@@ -51,7 +51,7 @@
                 <div class="form-group row">
                     <label for="verPassword" class="col-sm-2 col-form-label">Verificar contraseña:</label>
                     <div class="col-sm-10">
-                        <input type="password" name="contra" class="form-control form-control form-control-lg" id="verPassword" placeholder=" Verificar contraseña">
+                        <input type="password" name="contraV" class="form-control form-control form-control-lg" id="verPassword" placeholder=" Verificar contraseña">
                     </div>
                 </div>
 

@@ -19,6 +19,7 @@
 <body>
     <header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
+        <?php session_start(); ?>
     </header>
     <div class="container">
         <h2 class="titulo">Usuarios: </h2>
@@ -44,51 +45,51 @@
         </table>
     </div>
 
-    <form class="registroUsuario" action="../Componentes/actualizarUsuario.php" method="POST">
+    <form class="registroUsuario needs-validation" action="../Componentes/actualizarUsuario.php" method="POST" >
             <h2 class="titulo">Actualizar Usuario</h2>
             <div class="contenedor">
                 <div class="form-group row">
                     <label for="id" class="col-sm-2 col-form-label">Introduzca el ID del empleado:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="id" class="form-control form-control form-control-lg" id="id" placeholder="ID">
+                        <input type="text" name="id" class="form-control form-control form-control-lg" id="id" placeholder="ID" require>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="nombre" class="form-control form-control-lg" id="nombre" placeholder="Nombre">
+                        <input type="text" name="nombre" class="form-control form-control-lg" id="nombre" placeholder="Nombre"require>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="ApPaterno" class="col-sm-2 col-form-label">Apellido paterno:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="apPaterno" class="form-control form-control form-control-lg" id="ApPaterno" placeholder="Apellido paterno">
+                        <input type="text" name="apPaterno" class="form-control form-control form-control-lg" id="ApPaterno" placeholder="Apellido paterno"require>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="ApMaterno" class="col-sm-2 col-form-label">Apellido materno:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="apMaterno" class="form-control form-control form-control-lg" id="ApMaterno" placeholder="Apellido materno">
+                        <input type="text" name="apMaterno" class="form-control form-control form-control-lg" id="ApMaterno" placeholder="Apellido materno"require>
                     </div>
                 </div>
                 
                 <div class="form-group row">
                     <label for="inputEmail" class="col-sm-2 col-form-label">Correo electrónico:</label>
                     <div class="col-sm-10">
-                        <input type="email" name="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico">
+                        <input type="email" name="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico"require>
                     </div>
                 </div>   
     
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña:</label>
                     <div class="col-sm-10">
-                        <input type="password" name="password" class="form-control form-control form-control-lg" id="inputPassword" placeholder="Contraseña">
+                        <input type="password" name="password" class="form-control form-control form-control-lg" id="inputPassword" placeholder="Contraseña"require>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputCargo" class="col-sm-2 col-form-label">Cargo:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="cargo" class="form-control form-control form-control-lg" id="cargo" placeholder="Cargo">
+                        <input type="text" name="cargo" class="form-control form-control form-control-lg" id="cargo" placeholder="Cargo" require>
                     </div>
                 </div>   
 
@@ -105,7 +106,7 @@
                 <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">Introduzca el ID del empleado:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="id" class="form-control form-control form-control-lg" id="id" placeholder="ID">
+                        <input type="text" name="id" class="form-control form-control form-control-lg" id="id" placeholder="ID" require>
                     </div>
                 </div>
                 
@@ -115,6 +116,28 @@
                 </div>
             </div>
         </form>
-
+        <script>
+        // Disable form submissions if there are invalid fields
+        (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+            });
+        }, false);
+        })();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
