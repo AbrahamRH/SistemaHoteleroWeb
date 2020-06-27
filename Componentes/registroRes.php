@@ -1,5 +1,6 @@
 <?php
     include_once './db.php';
+
     /**Datos del huesped*/
     $nombre = $_POST['nombre'];
     $apPat = $_POST['apPat'];
@@ -15,46 +16,63 @@
 
     $query->execute();
 
-    $numhabitacion=$_POST['numHab'];
-    $checkin= $_POST['llegada'];
-    $checkout=$_POST['salida'];
-
-    $correoUs = $_POST['correoUs'];
-
-    $query = $con->prepare("SELECT * FROM HUESPED WHERE correo = '".$correoUs."'");
-    $query->execute();
-    $user1 = $query->fetchAll(PDO::FETCH_ASSOC);
-
-    foreach($user1 as $us){
-        $idUsuario = $us['usuario_id']; 
-    }
+//----------------------------------------------------------registro de reserva----------------------------------------------
+    $numhabitacion = $_POST['numHab'];
+    $checkin    =  $_POST['llegada'];
+    $checkout   =  $_POST['salida'];
+    $usuarioId  =  $_POST['usuarioId'];
 
 
     $query = $con->prepare("SELECT * FROM HUESPED WHERE correo = '".$correo."'");
     $query->execute();
-    $user2 = $query->fetchAll(PDO::FETCH_ASSOC);
+    $users = $query->fetchAll(PDO::FETCH_ASSOC);
 
-    foreach($user2 as $us){
-        $idHuesped = $us['huesped_id']; 
+    foreach($users as $user){
+        $idHuesped = $user['huesped_id']; 
     }
 
-    $query2 = $con->prepare("INSERT INTO RESERVA (reserva_id,usuario_id,huesped_id,habitacion_id,check-in,check-out,numero_huespedes) 
+    $query2 = $con->prepare("INSERT INTO `RESERVA` (`reserva_id`, `usuario_id`, `huesped_id`, `habitacion_id`, `check-in`, `check-out`, `numero_huespedes`)
                              VALUES (null,?,?,?,?,?,?)");
-    //check out 12  in 1 a 3 
-    $query2->bindParam(1,$idUsuario);
-    $query2->bindParam(2,$idHuesped);
-    $query2->bindParam(3,$numhabitacion);
+
+
+    $query2->bindParam(1,intval($usuarioId));
+    $query2->bindParam(2,intval($idHuesped));
+    $query2->bindParam(3,intval($numhabitacion));
     $query2->bindParam(4,$checkin);
     $query2->bindParam(5,$checkout);
-    $query2->bindParam(6,$numhuesped);
+    $query2->bindParam(6,intval($numhuesped));
     
 
     $query2->execute();
 
-    $mensaje="Nombre:". $nombre." ".$apPat." ".$apMat." Su numero de reserva de habitacion es: ".$reserva_id;
-    mail($correo,"Reservacion",$mensaje);
 
-    header("location: ../Pantallas/envioFormulario.php");
+    header("location: ../Pantallas/registroPago.php"); //.....manda a pagina registro de pag
+
+    //-------------------------------------------parte del registro de pago-------------------------------------------
+    /*
+    $descripcion = $_POST['descripcion'];
+    $monto = $_POST['monto'];
+    
+    $query = $con->prepare("SELECT * FROM RESERVA WHERE  usuario_id= '".$idUsuario."' AND huesped_id= '".$idHuesped."' ");
+    $query->execute();
+    $user2 = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach($user2 as $us){
+        $idReserva = $us['reserva_id'];
+    }
+
+    $query3 = $con->prepare("INSERT INTO REGISTRO_PAGO (registro_id,reserva_id,usuario_id,huesped_id,descripcion,importe) VALUES(null,?,?,?,?,?)");
+    $query3->bindParam(1,intval($idReserva));
+    $query3->bindParam(2,intval($idUsuario));
+    $query3->bindParam(3,intval($idHuesped));
+    $query3->bindParam(4,$descripcion);
+    $query3->bindParam(5,intval($monto));
+    
+    $query3->execute();*/
+    //$mensaje="Nombre:". $nombre." ".$apPat." ".$apMat." Su numero de reserva de habitacion es: ".$reserva_id;
+    //mail($correo,"Reservacion",$mensaje);
+
+    //header("location: ../Pantallas/envioFormulario.php");
 
 
 ?>

@@ -42,21 +42,21 @@
                     </div>
                 </div>   
                 <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Correo electrónico del usuario que va a registrar:</label>
+                    <label for="inputEmail" class="col-sm-2 col-form-label">ID usuario que va a registrar:</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control form-control form-control-lg" id="inputEmailUs" placeholder="Correo electrónico usuario" name="correoUs">
+                        <input type="text" class="form-control form-control form-control-lg" id="inputEmailUs" placeholder="Usuario ID" name="usuarioId">
                     </div>
                 </div> 
                 <div class="form-group row">
                     <label for="check-in" class="col-2 col-form-label" >Fecha de llegada: </label>
                     <div class="col-10">
-                        <input class="form-control form-control-lg" type="datetime-local" value="2020-08-19T13:45:00" id="check-in" name="llegada">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-in" name="llegada">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="check-out" class="col-2 col-form-label">Fecha de salida: </label>
                     <div class="col-10">
-                        <input class="form-control form-control-lg" type="datetime-local" value="2020-08-19T12:00:00" id="check-out" name="salida">
+                        <input class="form-control form-control-lg" type="datetime-local" value="2011-08-19T13:45:00" id="check-out" name="salida">
                     </div>
                 </div>
                 <div class="form-group row">

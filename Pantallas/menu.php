@@ -9,7 +9,6 @@
     <title>El descanso medieval</title>
 </head>
 <body>
-    <?php echo $_SESSION['user'];?>
     <header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
         <a href="../Componentes/logout.php" class="logo btn">Cerrar sesion</a>
