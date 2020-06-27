@@ -27,8 +27,7 @@
             include_once './menu.php';
             
         } else {
-            $errorLogin ="Usuario y/o contraseña incorrecto";
-            echo $errorLogin . "Regresa al formulario";
+            include_once './errorSesion.php';
         }
 
     }
