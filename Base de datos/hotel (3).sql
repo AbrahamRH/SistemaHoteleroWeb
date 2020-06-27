@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 26-06-2020 a las 15:04:38
+-- Tiempo de generación: 26-06-2020 a las 21:05:50
 -- Versión del servidor: 8.0.20-0ubuntu0.20.04.1
 -- Versión de PHP: 7.4.3
 
@@ -31,41 +31,42 @@ SET time_zone = "+00:00";
 CREATE TABLE `HABITACION` (
   `habitacion_id` int UNSIGNED NOT NULL,
   `categoria` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `estado` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+  `estado` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `costo` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `HABITACION`
 --
 
-INSERT INTO `HABITACION` (`habitacion_id`, `categoria`, `estado`) VALUES
-(1, 'Estandar', 'dispobible'),
-(2, 'Estandar', 'dispobible'),
-(3, 'Estandar-frigobar', 'disponible'),
-(4, 'Estandar', 'dispobible'),
-(5, 'Estandar-frigobar', 'disponible'),
-(6, 'Estandar', 'dispobible'),
-(101, 'Estandar-frigobar', 'disponible'),
-(102, 'Estandar', 'dispobible'),
-(103, 'Estandar-frigobar', 'disponible'),
-(104, 'Estandar-frigobar', 'disponible'),
-(105, 'Estandar-frigobar', 'disponible'),
-(106, 'Estandar', 'dispobible'),
-(201, 'Estandar-frigobar', 'disponible'),
-(202, 'Estandar', 'dispobible'),
-(203, 'Estandar-frigobar', 'disponible'),
-(204, 'Estandar-frigobar', 'disponible'),
-(205, 'Estandar-frigobar', 'disponible'),
-(206, 'Estandar', 'dispobible'),
-(301, 'Estandar-frigobar', 'disponible'),
-(302, 'Estandar', 'dispobible'),
-(303, 'Estandar-frigobar', 'disponible'),
-(304, 'Estandar-frigobar', 'disponible'),
-(305, 'Estandar-frigobar', 'disponible'),
-(306, 'Estandar', 'dispobible'),
-(401, 'Junior suite', 'disponible'),
-(402, 'Junior suite', 'dispobible'),
-(403, 'Junior suite', 'disponible');
+INSERT INTO `HABITACION` (`habitacion_id`, `categoria`, `estado`, `costo`) VALUES
+(1, 'Estandar', 'disponible', 1000),
+(2, 'Estandar', 'disponible', 1000),
+(3, 'Estandar-frigobar', 'disponible', 1500),
+(4, 'Estandar', 'disponible', 1000),
+(5, 'Estandar-frigobar', 'disponible', 1500),
+(6, 'Estandar', 'disponible', 1000),
+(101, 'Estandar-frigobar', 'disponible', 1500),
+(102, 'Estandar', 'disponible', 1000),
+(103, 'Estandar-frigobar', 'disponible', 1500),
+(104, 'Estandar-frigobar', 'disponible', 1500),
+(105, 'Estandar-frigobar', 'disponible', 1500),
+(106, 'Estandar', 'disponible', 1000),
+(201, 'Estandar-frigobar', 'disponible', 1500),
+(202, 'Estandar', 'disponible', 1000),
+(203, 'Estandar-frigobar', 'disponible', 1500),
+(204, 'Estandar-frigobar', 'disponible', 1500),
+(205, 'Estandar-frigobar', 'disponible', 1500),
+(206, 'Estandar', 'disponible', 1000),
+(301, 'Estandar-frigobar', 'disponible', 1500),
+(302, 'Estandar', 'disponible', 1000),
+(303, 'Estandar-frigobar', 'disponible', 1500),
+(304, 'Estandar-frigobar', 'disponible', 1500),
+(305, 'Estandar-frigobar', 'disponible', 1500),
+(306, 'Estandar', 'disponible', 1000),
+(401, 'Junior suite', 'disponible', 3000),
+(402, 'Junior suite', 'disponible', 3000),
+(403, 'Junior suite', 'disponible', 3000);
 
 -- --------------------------------------------------------
 
