@@ -42,9 +42,13 @@
     $query2->bindParam(4,$checkin);
     $query2->bindParam(5,$checkout);
     $query2->bindParam(6,intval($numhuesped));
-    
 
     $query2->execute();
+
+    $query3 = $con->prepare("UPDATE HABITACION SET estado='no disponible' WHERE habitacion_id=? ");
+    $query3->bindParam(1,intval($numhabitacion));
+
+    $query3->execute();
 
 //----------------------------------------------------------registro de registro pago----------------------------------------------
 
@@ -53,6 +57,7 @@
     
     $query = $con->prepare("SELECT * FROM RESERVA WHERE  usuario_id= '".$usuarioId."' AND huesped_id= '".$idHuesped."' ");
     $query->execute();
+
     $user2 = $query->fetchAll(PDO::FETCH_ASSOC);
 
     foreach($user2 as $us){
