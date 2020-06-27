@@ -53,7 +53,6 @@
 //----------------------------------------------------------registro de registro pago----------------------------------------------
 
     $descripcion = $_POST['descripcion'];
-    $monto = $_POST['monto'];
     
     $query = $con->prepare("SELECT * FROM RESERVA WHERE  usuario_id= '".$usuarioId."' AND huesped_id= '".$idHuesped."' ");
     $query->execute();
@@ -62,6 +61,14 @@
 
     foreach($user2 as $us){
         $idReserva = $us['reserva_id'];
+    }
+
+    $query = $con->prepare("SELECT * FROM HABITACION WHERE habitacion_id= '".$numhabitacion."'");
+    $query->execute();
+    $habitaciones = $query->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach($habitaciones as $us){
+        $monto = $us['costo'];
     }
 
     $query3 = $con->prepare("INSERT INTO REGISTRO_PAGO (registro_id,reserva_id,usuario_id,huesped_id,descripción,importe) VALUES(null,?,?,?,?,?)");

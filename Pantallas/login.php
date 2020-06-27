@@ -10,8 +10,20 @@
         $pass = $_POST['password'];
 
         if(userExists($correo,$pass,$con)){
+            session_start();
+            
 
-            $_SESSION['user'] = $correo;
+            $query = $con->prepare("SELECT * FROM USUARIO WHERE  correo= '".$correo."' ");
+            $query->execute();
+            
+            $users = $query->fetchAll(PDO::FETCH_ASSOC);
+            foreach($users as $us){
+                $cargo = $us['cargo'];
+            }
+            
+            $_SESSION['cargo'] = $cargo;
+            
+                
             include_once './menu.php';
             
         } else {

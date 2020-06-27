@@ -12,16 +12,21 @@
     <header>
         <div class="logo">EL DESCANSO MEDIEVAL</div>
         <a href="../Componentes/logout.php" class="logo btn">Cerrar sesion</a>
+        <?php session_start(); ?>
     </header>
     <main>
         <div class="flex-container">
-            <a href="./registroUsuario.php">Registro usuario</a>
-            <a href="#">Reporte ventas</a>
-            <a href="./reporteHabitacion.php">Reporte de habitaciones</a>
-            <a href="./actualizarUsuario.php">Actualización de usuarios</a>
-            <a href="#">Actualización de servicios</a>
-            <a href="#">Actualización de datos de habitaciones</a>
             <a href="./registroReservacion.php">Reservar una habitación</a>
+            <a href="./reporteHabitacion.php">Reporte de habitaciones</a>
+            <a href="./actualizarHabitacion.php">Actualización de datos de habitaciones</a>
+            <?php 
+            if($_SESSION['cargo'] == 'gerente'){
+                echo'
+                <a href="./registroUsuario.php">Registro usuario</a>
+                <a href="./reporteVentas.php">Reporte ventas</a>
+                <a href="./actualizarUsuario.php">Actualización de usuarios</a>'; 
+            }
+            ?>
         </div>
     </main>
 </body>

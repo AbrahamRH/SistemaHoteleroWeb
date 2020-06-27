@@ -28,15 +28,10 @@
                 <div class="form-group row">
                     <label for="id" class="col-sm-2 col-form-label">Introduzca el ID de la habitacion que desea modificar:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="habitacionIdViejo" class="form-control form-control form-control-lg" id="idhabitacion" placeholder="habitacionId">
+                        <input type="text" name="habitacionIdViejo" class="form-control form-control form-control-lg" id="id habitacion" placeholder="habitacionId">
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="id" class="col-sm-2 col-form-label">Introduzca el nuevo ID de la habitacion:</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="habitacionIdNuevo" class="form-control form-control form-control-lg" id="idhabitacion" placeholder="habitacionId">
-                    </div>
-                </div>
+                
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-2 col-form-label">Categoria:</label>
                     <div class="col-sm-10">
@@ -46,7 +41,7 @@
                 <div class="form-group row">
                     <label for="ApPaterno" class="col-sm-2 col-form-label">Estado:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="Estado" class="form-control form-control form-control-lg" id="Estado" placeholder="Estado">
+                        <input type="text" name="estado" class="form-control form-control form-control-lg" id="Estado" placeholder="Estado">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -56,25 +51,6 @@
                     </div>
                 </div>
                 
-                <div class="form-group row">
-                    <label for="inputEmail" class="col-sm-2 col-form-label">Correo electrónico:</label>
-                    <div class="col-sm-10">
-                        <input type="email" name="email" class="form-control form-control form-control-lg" id="inputEmail" placeholder="Correo electrónico">
-                    </div>
-                </div>   
-    
-                <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña:</label>
-                    <div class="col-sm-10">
-                        <input type="password" name="password" class="form-control form-control form-control-lg" id="inputPassword" placeholder="Contraseña">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputCargo" class="col-sm-2 col-form-label">Cargo:</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="cargo" class="form-control form-control form-control-lg" id="cargo" placeholder="Cargo">
-                    </div>
-                </div>   
 
                 <div class="flex-container">
                     <button class="btn-registrar btn">Actualizar</button>

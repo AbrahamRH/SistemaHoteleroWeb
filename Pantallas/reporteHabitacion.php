@@ -32,6 +32,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">TIpo</th>
                 <th scope="col">Estado</th>
+                <th scope="col"></th>
                 <th scope="col">Huesped ID</th>
             </tr>
         </thead>
@@ -48,6 +49,14 @@
             <th scope="row"><?php echo $habitacion['habitacion_id']; ?></th>
             <td><?php echo $habitacion['categoria']; ?></td>
             <td><?php echo $habitacion['estado']; ?></td>
+            <?php
+            if ($huesped =='null'){
+                echo '<td style="background-color:#8CC154;"></td>';
+            }
+            else {
+                echo '<td style="background-color:#C42030;"></td>';
+            }
+            ?>
             <td><?php echo $huesped; ?></td>
             </tr>
             <?php }?>
