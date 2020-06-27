@@ -23,31 +23,30 @@
     
 
     <form class="registroUsuario" action="../Componentes/actualizarHab.php" method="POST">
-            <h2 class="titulo">Actualizar Habitacion</h2>
+            <h2 class="titulo">Actualizar habitación</h2>
             <div class="contenedor">
                 <div class="form-group row">
-                    <label for="id" class="col-sm-2 col-form-label">Introduzca el ID de la habitacion que desea modificar:</label>
+                    <label for="id" class="col-sm-2 col-form-label">ID de la habitacion que desea modificar:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="habitacionIdViejo" class="form-control form-control form-control-lg" id="id habitacion" placeholder="habitacionId">
-                    </div>
-                </div>
-                
-                <div class="form-group row">
-                    <label for="nombre" class="col-sm-2 col-form-label">Categoria:</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="categoria" class="form-control form-control-lg" id="categoria" placeholder="categoria">
+                        <input type="text" name="habitacionIdViejo" class="form-control form-control form-control-lg" id="id habitacion" placeholder="ID de la habitacion">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="ApPaterno" class="col-sm-2 col-form-label">Estado:</label>
+                    <label for="categoria" class="col-sm-2 col-form-label">Categoria:</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="categoria" class="form-control form-control form-control-lg" id="categoria" placeholder="Categoria">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="estudiar" class="col-sm-2 col-form-label">Estado:</label>
                     <div class="col-sm-10">
                         <input type="text" name="estado" class="form-control form-control form-control-lg" id="Estado" placeholder="Estado">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="ApMaterno" class="col-sm-2 col-form-label">Costo:</label>
+                    <label for="costo" class="col-sm-2 col-form-label">Costo:</label>
                     <div class="col-sm-10">
-                        <input type="text" name="costo" class="form-control form-control form-control-lg" id="costo" placeholder="costo">
+                        <input type="text" name="costo" class="form-control form-control form-control-lg" id="costo" placeholder="Costo">
                     </div>
                 </div>
                 

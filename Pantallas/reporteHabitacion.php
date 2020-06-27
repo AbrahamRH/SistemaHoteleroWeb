@@ -65,7 +65,6 @@
     </div>
     <form class="registroUsuario" action="../Componentes/actualizarHabitacion.php" method="POST">
         <div class="flex-container">
-            <button class="btn-registrar btn">Enviar</button>
             <a href="./menu.php" class="btn-regresar btn">Regresar</a>
         </div>
     </form>

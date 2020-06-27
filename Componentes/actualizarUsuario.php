@@ -20,8 +20,6 @@
                             `cargo` = '".$cargo."' 
                             WHERE `USUARIO`.`usuario_id` = ?");
 
-
-
     $query->bindParam(1,$id);
     $query->execute();
 

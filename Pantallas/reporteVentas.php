@@ -3,6 +3,14 @@
     $query = $con->prepare("SELECT * FROM REGISTRO_PAGO");
     $query->execute();
     $ventas = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    $query = $con->prepare("SELECT * FROM RESERVA");
+    $query->execute();
+    $reservas = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    $query = $con->prepare("SELECT * FROM HABITACION");
+    $query->execute();
+    $habitaciones = $query->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -20,37 +28,65 @@
     <header>
         <div class="logo">EL DESCANSO MEDIEVAL  <?php echo $_SESSION['cargo']; ?> </div>
     </header>
+    <div class="registroUsuario" action="../Componentes/actualizarHabitacion.php" method="POST">
+    <h2 class="titulo">Reportes por: </h2>
+        <div class="flex-container">
+            <a href="./repHab.php" class="btn-regresar btn">Por habitacion</a>
+            <a href="./repUs.php" class="btn-regresar btn">Por usuario</a>
+            <a href="./repFecha.php" class="btn-regresar btn">Por fecha</a>
+        </div>
+    </div>
     <div class="container">
         <h2 class="titulo">Ventas: </h2>
         <table class="table">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">ID</th>
+                <th scope="col">ID Venta</th>
                 <th scope="col">ID Usuario</th>
+                <th scope="col">ID Habitación</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Check-in</th>
+                <th scope="col">Ckeck-out</th>
                 <th scope="col">Descripción</th>
                 <th scope="col">Importe</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach($ventas as $venta){ 
+                    foreach($reservas as $reserva){
+                        if($venta['reserva_id'] == $reserva['reserva_id']){
+                            $checkin  = $reserva['check-out'];
+                            $checkout = $reserva['check-out'];
+                            $habitacionId = $reserva['habitacion_id'];
+                        }
+                    }
+                    foreach($habitaciones as $habitacion){
+                        if($habitacion['habitacion_id'] == $habitacionId ){
+                            $tipoHabitacion = $habitacion['categoria'];
+                        }
+                    }
                 
             ?>
             <tr>
             <th scope="row"><?php echo $venta['registro_id']; ?></th>
             <td><?php echo $venta['usuario_id']; ?></td>
+            <td><?php echo $habitacionId; ?></td>
+            <td><?php echo $tipoHabitacion; ?></td>
+            <td><?php echo $checkin; ?></td>
+            <td><?php echo $checkout; ?></td>
             <td><?php echo $venta['descripción']; ?></td>
             <td><?php echo $venta['importe']; ?></td>
             </tr>
             <?php }?>
+            
         </tbody>
         </table>
     </div>
-    <form class="registroUsuario" action="../Componentes/actualizarHabitacion.php" method="POST">
+    <div class="registroUsuario" action="../Componentes/actualizarHabitacion.php" method="POST">
         <div class="flex-container">
-            <button class="btn-registrar btn">Enviar</button>
             <a href="./menu.php" class="btn-regresar btn">Regresar</a>
         </div>
-    </form>
+    </div>
 
 </body>
 </html>

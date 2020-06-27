@@ -10,9 +10,9 @@
                             SET
                             `categoria` = '".$cat."',
                             `estado` = '".$est."', 
-                            `costo` = '".$cos."', 
-                            WHERE `habitacion_id` = '".$idV."' ");
-
+                            `costo` = '".$cos."',
+                            WHERE `HABITACION`.`habitacion_id` = ? ");
+    $query->bindParam(1,$idV);
     $query->execute();
     header("location: ../Pantallas/envioFormulario.php");
         
